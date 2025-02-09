@@ -1,0 +1,15 @@
+# Git Version
+git --Version
+
+# Configuring Git
+git config --global user.name
+git config --global user.email
+git config user.name
+git config user.email
+
+# Legend
+U - Untracked
+A - Added
+M - Modified
+
+# Git Three Stage
