@@ -26,7 +26,7 @@ git add .
 git add [filename]
 
 -Create a commit
-get commit
+git commit -m "message"
 
 -Show the history
 git log
