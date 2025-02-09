@@ -30,3 +30,13 @@ git commit -m "message"
 
 -Show the history
 git log
+
+# Branching
+-Create a Branching
+git branch [branch-name]
+
+-List of branches
+git branch -a
+
+-Switch to a different branch
+git switch [branch-name]
