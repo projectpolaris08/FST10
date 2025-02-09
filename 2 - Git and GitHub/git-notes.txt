@@ -31,7 +31,7 @@ git commit -m "message"
 -Show the history
 git log
 
-# Branching
+# Branching and Merging
 -Create a Branching
 git branch [branch-name]
 
@@ -40,3 +40,9 @@ git branch -a
 
 -Switch to a different branch
 git switch [branch-name]
+
+-Merging a branch to the master branch
+git merge [branch-name]
+
+-Delete a branch
+git branch -d [branch-name]
