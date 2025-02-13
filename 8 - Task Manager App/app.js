@@ -37,6 +37,51 @@ function addTodo(e) {
 
     // Append the todo div to the todo list
     todoList.appendChild(todoDiv);
-
-
+    todoInput.value = '';
 }
+
+// Step 4: Function to delete or complete task
+function deleteOrCompleteTodo(e) {
+    const targetBtn = e.target;
+    if (targetBtn.classList.contains('trash-btn')) {
+      const todoDiv = targetBtn.parentElement;
+      todoDiv.classList.add('fall');
+      todoDiv.addEventListener("transitionend", function () {
+        todoDiv.remove();
+      })
+    }
+
+    if (targetBtn.classList.contains("complete-btn")) {
+        const todoDiv = targetBtn.parentElement;
+        todoDiv.classList.toggle("completed")
+    }
+}
+
+// Step 5: Function to filter task based on completion status
+function filterTodos(e) {
+    const todos = todoList.childNodes;
+    todos.forEach(function (todo) {
+      const filterValue = e.target.value;
+      
+      if (filterValue === "all") {
+        todo.style.display = "flex"; // elements are visible
+      } else if (filterValue === "completed") {
+        // show the completed items
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          // hide the uncompleted items
+          todo.style.display = "none";
+        }
+        // show the uncompleted items
+      if (!todo.classList.contains("completed")) {
+        todo.style.display = "flex";
+      } else {
+        // hide the completed items
+        todo.style.display = "none";
+      }
+    }
+    })
+  }
+
+
